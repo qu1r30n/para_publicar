@@ -1,0 +1,115 @@
+using System.IO;
+using System;
+
+class Program
+{
+static void Main()
+{
+long a,b=0,valor_posicion=1,acum=0,respuesta_us;
+string binarios="",salir="";
+Random rnd = new Random();
+
+while(salir!="s")
+{ 
+for(int i=1;i<=4;i++)
+{
+
+a = rnd.Next(1,100);
+
+if(a<=10)
+{
+b=1;
+binarios=b+binarios;
+}
+
+else if(a>=11 && a<=20)
+{
+b=0;
+binarios=b+binarios;
+}
+
+else if(a>=21 && a<=30)
+{
+b=1;
+binarios=b+binarios;
+}
+
+else if(a>=31 && a<=40)
+{
+b=0;
+binarios=b+binarios;
+}
+
+else if(a>=41 && a<=50)
+{
+b=1;
+binarios=b+binarios;
+}
+
+else if(a>=51 && a<=60)
+{
+b=0;
+binarios=b+binarios;
+}
+
+else if(a>=61 && a<=70)
+{
+b=1;
+binarios=b+binarios;
+}
+
+else if(a>=71 && a<=80)
+{
+b=0;
+binarios=b+binarios;
+}
+
+else if(a>=81 && a<=90)
+{
+b=1;
+binarios=b+binarios;
+}
+
+else if(a>=91 && a<=101)
+{
+b=0;
+binarios=b+binarios;
+}
+
+if(b==1)
+{
+acum=acum+valor_posicion;
+}
+if(i==4 || i==8 || i==12 || i==16 || i==20 || i==24 || i==28 || i==32 || i==36 || i==40)
+{
+binarios=","+binarios;
+}
+//Console.WriteLine("\n"+ valor_posicion);
+valor_posicion=valor_posicion*2;
+
+
+}
+Console.WriteLine("\ncual es su valor en decimal de");
+Console.WriteLine("\n"+binarios);
+//Console.WriteLine("\n"+acum); //para probar
+respuesta_us=Convert.ToInt64(Console.ReadLine());
+
+if(respuesta_us==acum)
+{
+Console.WriteLine("BIEN"); 
+Console.WriteLine("\n"+acum);
+}
+else
+{
+Console.WriteLine("MAL EL RESULTADO ERA"); 
+Console.WriteLine("\n"+acum);
+}
+Console.WriteLine("\n\nsi desea salir oprima s minuscula si no oprima cualquier otra o enter");
+salir=Console.ReadLine();
+Console.Clear();
+binarios="";
+acum=0;
+valor_posicion=1;
+}
+}
+}
