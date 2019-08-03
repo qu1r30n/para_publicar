@@ -52,25 +52,25 @@ class Program
                 kilobits=cantidad*0.008;
                 megabits=cantidad*0.000008;
                 bytes=cantidad*1;
-                kilobytes=cantidad*0.001;
-                megabytes=cantidad*0.000001;
+                kilobytes=cantidad*0.0009765625;
+                megabytes=cantidad*0.00000095367431640625;
                 bandera=1;
             break;
             case "4":
                 bits=cantidad*8000;
                 kilobits=cantidad*8;
                 megabits=cantidad*0.008;
-                bytes=cantidad*1000;
+                bytes=cantidad*1024;
                 kilobytes=cantidad*1;
-                megabytes=cantidad*0.001;
+                megabytes=cantidad*0.0009765625;
                 bandera=1;
             break;
             case "5":
                 bits=cantidad*8000000;
                 kilobits=cantidad*8000;
                 megabits=cantidad*8;
-                bytes=cantidad*1000000;
-                kilobytes=cantidad*1000;
+                bytes=cantidad*1048576;
+                kilobytes=cantidad*1024;
                 megabytes=cantidad*1;
                 bandera=1;
             break;
