@@ -57,18 +57,18 @@ class Program
                 bandera=1;
             break;
             case "4":
-                bits=cantidad*8000;
-                kilobits=cantidad*8;
-                megabits=cantidad*0.008;
+                bits=cantidad*1024*8;
+                kilobits=cantidad*1024*0.008;
+                megabits=cantidad*1024*0.000008;
                 bytes=cantidad*1024;
                 kilobytes=cantidad*1;
                 megabytes=cantidad*0.0009765625;
                 bandera=1;
             break;
             case "5":
-                bits=cantidad*8000000;
-                kilobits=cantidad*8000;
-                megabits=cantidad*8;
+                bits=cantidad*1048576*8;
+                kilobits=cantidad*1048576*0.008;
+                megabits=cantidad*1048576*0.000008;
                 bytes=cantidad*1048576;
                 kilobytes=cantidad*1024;
                 megabytes=cantidad*1;
@@ -93,4 +93,3 @@ class Program
         }
     }
 }
-
